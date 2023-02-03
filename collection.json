@@ -1,0 +1,42 @@
+{
+  "info": {
+    "name": "Y Combinator API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.ycombinator.com/v0.1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Company",
+      "item": [
+        {
+          "name": "Get All Companies",
+          "request": {
+            "description": "Get a list of the public Y Combinator companies in the [Directory](https://www.ycombinator.com/companies).",
+            "url": {
+              "raw": "{{baseUrl}}/companies",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "companies"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [],
+            "method": "GET"
+          },
+          "response": [],
+          "_type": "endpoint"
+        }
+      ],
+      "_type": "container"
+    }
+  ]
+}
