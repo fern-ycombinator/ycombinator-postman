@@ -19,20 +19,66 @@
           "request": {
             "description": "Get a list of the public Y Combinator companies in the [Directory](https://www.ycombinator.com/companies).",
             "url": {
-              "raw": "{{baseUrl}}/companies",
+              "raw": "{{baseUrl}}/companies?q=Fern&batch=W23",
               "host": [
                 "{{baseUrl}}"
               ],
               "path": [
                 "companies"
               ],
-              "query": [],
+              "query": [
+                {
+                  "key": "q",
+                  "description": "To search YC companies, you can pass in a general search query.",
+                  "value": "Fern"
+                },
+                {
+                  "key": "batch",
+                  "description": "The batch the company participated in",
+                  "value": "W23"
+                }
+              ],
               "variable": []
             },
             "header": [],
             "method": "GET"
           },
-          "response": [],
+          "response": [
+            {
+              "name": "Success",
+              "status": "OK",
+              "code": 200,
+              "originalRequest": {
+                "description": "Get a list of the public Y Combinator companies in the [Directory](https://www.ycombinator.com/companies).",
+                "url": {
+                  "raw": "{{baseUrl}}/companies?q=Fern&batch=W23",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "companies"
+                  ],
+                  "query": [
+                    {
+                      "key": "q",
+                      "description": "To search YC companies, you can pass in a general search query.",
+                      "value": "Fern"
+                    },
+                    {
+                      "key": "batch",
+                      "description": "The batch the company participated in",
+                      "value": "W23"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [],
+                "method": "GET"
+              },
+              "body": "{\n    \"companies\": [\n        {\n            \"id\": 28103,\n            \"name\": \"Fern\",\n            \"slug\": \"fern\",\n            \"website\": \"https://www.buildwithfern.com\",\n            \"smallLogoUrl\": \"https://bookface-images.s3.amazonaws.com/small_logos/884fb2f50da3c4151657d7b8e82ec485436cc6a6.png\",\n            \"oneLiner\": \"Stop writing tedious boilerplate. Start using Fern.\",\n            \"longDescription\": \"Our team has spent a lot of time doing repetitive, boring tasks when writing APIs.\\r\\n\\r\\nWe would write the types and networking on the backend and then do it all again in TypeScript on the frontend. We’d do it again when writing client libraries, and a fourth time when updating our documentation and Postman collection.\\r\\n\\r\\nWriting the same code again and again and keeping it all in sync is time-consuming, error-prone, and work that no engineering team wants to do.\\r\\n\\r\\nFern is automation for your API. Define your API once and click generate. Out of the box, you’ll get server code, clients, and a Postman collection.\",\n            \"teamSize\": 3,\n            \"url\": \"https://www.ycombinator.com/companies/fern\",\n            \"batch\": \"W23\",\n            \"tags\": [\n                \"API\",\n                \"B2B\",\n                \"SaaS\",\n                \"Open Source\",\n                \"Developer Tools\"\n            ],\n            \"status\": \"Active\",\n            \"industries\": [\n                \"B2B Software and Services\",\n                \"Engineering, Product and Design\"\n            ],\n            \"regions\": [\n                \"United States of America\",\n                \"America / Canada\"\n            ],\n            \"locations\": [\n                \"San Francisco, CA, USA\",\n                \"Seattle, WA, USA\"\n            ],\n            \"badges\": []\n        }\n    ],\n    \"page\": 0,\n    \"totalPages\": 1\n}",
+              "_postman_previewlanguage": "json"
+            }
+          ],
           "_type": "endpoint"
         }
       ],
